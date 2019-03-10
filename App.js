@@ -1,17 +1,69 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
-import { BottomNavigation, Text } from "react-native-paper";
+import {
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  ScrollView
+} from "react-native";
+import {
+  BottomNavigation,
+  Text,
+  Card,
+  Paragraph,
+  Title,
+  Button,
+  Avatar
+} from "react-native-paper";
 import Icon from "react-native-vector-icons/dist/MaterialIcons";
 
-const Home = () => <Text>Home</Text>;
+const Home = () => (
+  <ScrollView style={{ flex: 1, backgroundColor: "green" }}>
+    <Card style={styles.card}>
+      <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
+      <View
+        style={{
+          justifyContent: "flex-start",
+          alignItems: "center",
+          flexDirection: "row"
+        }}
+      >
+        <Avatar.Image
+          source={{ uri: "https://randomuser.me/api/portraits/men/84.jpg" }}
+          size={50}
+        />
+        <Card.Content>
+          <Title>Card title</Title>
+          <Paragraph>Card content</Paragraph>
+        </Card.Content>
+      </View>
+    </Card>
+  </ScrollView>
+);
 
-const Trending = () => <Text>Trending</Text>;
+const Trending = () => (
+  <ScrollView style={{ flex: 1, backgroundColor: "blue" }}>
+    <Text>Trending</Text>
+  </ScrollView>
+);
 
-const Subscriptions = () => <Text>Subscriptions</Text>;
+const Subscriptions = () => (
+  <ScrollView style={{ flex: 1, backgroundColor: "yellow" }}>
+    <Text>Subscriptions</Text>
+  </ScrollView>
+);
 
-const Inbox = () => <Text>Inbox</Text>;
+const Inbox = () => (
+  <ScrollView style={{ flex: 1, backgroundColor: "teal" }}>
+    <Text>Inbox</Text>
+  </ScrollView>
+);
 
-const Library = () => <Text>Library</Text>;
+const Library = () => (
+  <ScrollView style={{ flex: 1, backgroundColor: "brown" }}>
+    <Text>Library</Text>
+  </ScrollView>
+);
 
 class App extends Component {
   state = {
@@ -83,7 +135,8 @@ const styles = StyleSheet.create({
     marginTop: 40,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    elevation: 1
   },
 
   logoContainer: {
@@ -102,6 +155,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around"
+  },
+  card: {
+    marginBottom: 5
   }
 });
 
