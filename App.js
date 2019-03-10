@@ -20,91 +20,30 @@ import Icon from "react-native-vector-icons/dist/MaterialIcons";
 
 const Home = () => (
   <ScrollView
-    style={{ flex: 1 }}
+    style={{ flex: 1, width: "100%" }}
     refreshControl={
       <RefreshControl refreshing={false} onRefresh={() => console.log("1")} />
     }
   >
     <Card style={styles.card}>
-      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
+      <Card.Cover source={require("./src/assets/images/video1.png")} />
       <View
         style={{
           justifyContent: "flex-start",
           alignItems: "center",
           flexDirection: "row",
-          padding: 10
+          padding: 5
         }}
       >
         <Avatar.Image
           source={{ uri: "https://randomuser.me/api/portraits/men/84.jpg" }}
           size={50}
         />
-        <Card.Content>
-          <Title>Card title</Title>
-          <Paragraph>Card content</Paragraph>
-        </Card.Content>
-      </View>
-    </Card>
-
-    <Card style={styles.card}>
-      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
-      <View
-        style={{
-          justifyContent: "flex-start",
-          alignItems: "center",
-          flexDirection: "row",
-          padding: 10
-        }}
-      >
-        <Avatar.Image
-          source={{ uri: "https://randomuser.me/api/portraits/men/85.jpg" }}
-          size={50}
-        />
-        <Card.Content>
-          <Title>Card title</Title>
-          <Paragraph>Card content</Paragraph>
-        </Card.Content>
-      </View>
-    </Card>
-
-    <Card style={styles.card}>
-      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
-      <View
-        style={{
-          justifyContent: "flex-start",
-          alignItems: "center",
-          flexDirection: "row",
-          padding: 10
-        }}
-      >
-        <Avatar.Image
-          source={{ uri: "https://randomuser.me/api/portraits/men/86.jpg" }}
-          size={50}
-        />
-        <Card.Content>
-          <Title>Card title</Title>
-          <Paragraph>Card content</Paragraph>
-        </Card.Content>
-      </View>
-    </Card>
-
-    <Card style={styles.card}>
-      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
-      <View
-        style={{
-          justifyContent: "flex-start",
-          alignItems: "center",
-          flexDirection: "row",
-          padding: 10
-        }}
-      >
-        <Avatar.Image
-          source={{ uri: "https://randomuser.me/api/portraits/men/87.jpg" }}
-          size={50}
-        />
-        <Card.Content>
-          <Title>Card title</Title>
-          <Paragraph>Card content</Paragraph>
+        <Card.Content style={{ flex: 1 }}>
+          <Title numberOfLines={2}>
+            5 Reasons why chinese millitary is weaker than you think
+          </Title>
+          <Paragraph>Beyond Science</Paragraph>
         </Card.Content>
       </View>
     </Card>
