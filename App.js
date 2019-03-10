@@ -4,7 +4,8 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  RefreshControl
 } from "react-native";
 import {
   BottomNavigation,
@@ -18,18 +19,87 @@ import {
 import Icon from "react-native-vector-icons/dist/MaterialIcons";
 
 const Home = () => (
-  <ScrollView style={{ flex: 1, backgroundColor: "green" }}>
+  <ScrollView
+    style={{ flex: 1 }}
+    refreshControl={
+      <RefreshControl refreshing={false} onRefresh={() => console.log("1")} />
+    }
+  >
     <Card style={styles.card}>
-      <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
+      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
       <View
         style={{
           justifyContent: "flex-start",
           alignItems: "center",
-          flexDirection: "row"
+          flexDirection: "row",
+          padding: 10
         }}
       >
         <Avatar.Image
           source={{ uri: "https://randomuser.me/api/portraits/men/84.jpg" }}
+          size={50}
+        />
+        <Card.Content>
+          <Title>Card title</Title>
+          <Paragraph>Card content</Paragraph>
+        </Card.Content>
+      </View>
+    </Card>
+
+    <Card style={styles.card}>
+      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
+      <View
+        style={{
+          justifyContent: "flex-start",
+          alignItems: "center",
+          flexDirection: "row",
+          padding: 10
+        }}
+      >
+        <Avatar.Image
+          source={{ uri: "https://randomuser.me/api/portraits/men/85.jpg" }}
+          size={50}
+        />
+        <Card.Content>
+          <Title>Card title</Title>
+          <Paragraph>Card content</Paragraph>
+        </Card.Content>
+      </View>
+    </Card>
+
+    <Card style={styles.card}>
+      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
+      <View
+        style={{
+          justifyContent: "flex-start",
+          alignItems: "center",
+          flexDirection: "row",
+          padding: 10
+        }}
+      >
+        <Avatar.Image
+          source={{ uri: "https://randomuser.me/api/portraits/men/86.jpg" }}
+          size={50}
+        />
+        <Card.Content>
+          <Title>Card title</Title>
+          <Paragraph>Card content</Paragraph>
+        </Card.Content>
+      </View>
+    </Card>
+
+    <Card style={styles.card}>
+      <Card.Cover source={{ uri: "https://picsum.photos/700?random" }} />
+      <View
+        style={{
+          justifyContent: "flex-start",
+          alignItems: "center",
+          flexDirection: "row",
+          padding: 10
+        }}
+      >
+        <Avatar.Image
+          source={{ uri: "https://randomuser.me/api/portraits/men/87.jpg" }}
           size={50}
         />
         <Card.Content>
